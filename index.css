@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Montserrat', sans-serif;
+  --font-serif: 'Cinzel', serif;
+  --color-gold: #D4AF37;
+  --color-accent: #9e6b4f;
+}
+
+/* Global Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px; /* 1. Lock root font size */
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #F5F5F0;
+  color: black;
+  font-family: var(--font-sans);
+  line-height: 1.5; /* 2. Lock global line-height */
+  overflow-x: hidden; /* Prevent horizontal scroll from stray elements */
+}
+
+/* 3. Constrain SVGs & Images */
+img, svg, video, canvas, audio, iframe, embed, object {
+  display: block;
+  max-width: 100%;
+}
+
+svg {
+  flex-shrink: 0; /* Prevent icons from squishing */
+}
+
+/* Typography Defaults */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* Luxury Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F5F5F0;
+}
+::-webkit-scrollbar-thumb {
+  background: #1a1a1a;
+  border-radius: 3px;
+}
